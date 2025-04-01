@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+   font-family:'cairo';
+   /* border-box : lمعناها لو اخذت padding or margin من الصفحة ميأثر على حجم الصفحة  */
+   /* ضرورية لما باجي اعمل الهيدر واعطيه position:fixed & width:100%  */
+   box-sizing: border-box;
+   margin:0px ;
+   padding:0px ;
+   scroll-behavior: smooth;
+}
+header{
+    display: flex;
+   justify-content:space-between;
+   align-items:center;
+   background-color:rgb(149, 175, 200);
+   color: white;
+   padding:0 100px;
+   border-top: solid crimson 4px ;
+   font-size: large;
+   position: fixed;
+   width:100% ;
+   z-index: 100;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px; 
+    font-size: 20px;
+    transition: ease .5s;
+    /* بيزبط الظهور لما بعمل hover على اللينك  */
+}
+header a:hover{
+    color: crimson;
+    font-size:22px ;
+}
+header:hover{
+    border-top:3px solid white;
+}
+/* CURSOR STYLE..  */
+.cursor{
+    background-image: url('images/full1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-position: center; */
+    /* overlay picture */
+    background-blend-mode:overlay ;
+    background-color:rgba(0, 0, 0, .4);
+    /* vh means : الطول حيكون على قد الشاشة  */
+   height: 100vh;
+   /* display flex & align item:center ---- لتوسيط العناصر وسط الشاشة بشكل راسي  */
+   display: flex;
+   align-items: center;
+   padding:0 80px ;
+}
+.cursor span{
+    color: crimson;
+}
+ .cursor a{
+    background-color: aquamarine;
+    color: white;
+    text-decoration:none ;
+    border-radius: 10px;
+    border: 1px solid aquamarine;
+    padding:10px ;
+    display: inline-block;
+    margin-top:10px ;
+}
+.cursor a:hover{
+    background-color: antiquewhite;
+    transform:scale(1.1) ;
+}
+
+/* /* Services ...  */
+.services .container{
+    display:flex ;
+    justify-content: center;   
+    margin-top:25px ;
+   padding: 0 80px;
+   /* flex wrap : بتعطي الكونتينر ديناميكية بحيث انه لما بدي اضيف اكثر من كارد مايلزقهم كلهم حنب بعض  */
+   flex-wrap: wrap;
+    
+    
+} 
+
+.services .card{
+    background-color: azure;
+    border:1px solid black ;
+    padding:20px ;
+    margin-left:20px ;
+    box-shadow:3px 3px 3px 6px gray;
+    width:20em ;
+    margin-bottom:30px ;
+    text-align: justify;
+   
+}
+
+ .services h2{
+   text-align: center;
+   margin:30px 0 ;
+ }
+ .services h3{
+    text-align: center;
+    color: crimson;
+    font-weight: 1000;
+ }
+ .icon{
+    text-align: center;
+    font-size: 50px;
+    color:rgb(149, 175, 200);
+ }
+ /* Portfolio ... */
+
+ .portfolio{
+    background-color: rgb(149, 175, 200);
+}
+.portfolio .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding:30px 80px ;
+}
+.portfolio h2{
+    color: white;
+    font-size: 3em;
+    border-bottom: 2px solid crimson;
+    display: inline-block; 
+}
+/* with inline block h2 will not appear in the middle of page except if i put it in a div */
+.title{
+    text-align: center;
+}
+.portfolio .card{
+    width:20em ;
+    border:1px solid ;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    height:290px ;
+   
+}
+.card img{
+    
+    width:20em ;
+    height:12em ;
+    /* object-fit:cover ==> بتزبط الصورة ع قد الكفر وبتصير احلى  */
+    object-fit: cover;
+}
+.content-desc{
+    padding-left: 15px;
+    padding-bottom: 10px;
+    /* display: flex; */
+    /* text-align:justify ==> same start and same end for paragraph */
+    text-align: justify;
+    line-height: 1;
+    font-weight:500 ;
+}
+.portfolio .content-desc button{
+    /* flex-shrink:0 ==>  تمنع انكماش الزر فحال كنت بدي اضعه بجانب الفقرة  */
+    /* flex-shrink:0 ; */
+    border-radius: 5px;
+    background-color: aqua;
+    /* align-self: end; */
+    margin:  10px 80px;
+    font-weight:700 ;
+    width:80px ;
+    transition:1s ease; 
+}
+.portfolio .content-desc button:hover{
+    transform: scale(1.1);
+}
+/* Courses */
+.courses{
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    flex-wrap: wrap;
+}
+.courses .image{
+    
+    border-radius:10px ;
+    box-shadow:7px 10px 2px rgb(89, 85, 85) ;
+    overflow: hidden;
+}
+
+
+
+.courses .content h2{
+    text-align: center;
+    color: crimson;
+    font-weight:900 ;
+    margin-top:20px ;
+}
+.courses .content{
+    text-align: justify;
+    padding-left:50px ;
+    width:60% ;
+}
+.courses .content-rtl{
+    text-align: justify;
+    padding-right:80px ;
+    width:60% ;
+}
+.courses .content-rtl h2{
+    text-align: center;
+    color: crimson;
+    font-weight:900 ;
+    margin-top:20px ;
+}
+/* Pictures */
+.pictures{
+    align-items: center;
+    margin-top: 80px;
+    background-image:url('images/full1.jpg') ;
+    background-blend-mode: overlay;
+    background-color:rgba(0, 0, 0, 0.599);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center ;
+    min-height:80vh;
+    text-align: center;
+}
+
+.pictures>div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top:50px ;
+
+}
+
+.pictures img{
+    width: 20em;
+    height: 20em;
+    border-radius:50% ;
+    border:3px solid white ;
+    margin-left:20px ;
+    margin-bottom:20px ;
+    /* object-fit: cover; */
+}
+
+.pictures h2{
+    color: white;
+    text-align: center;
+     padding-top: 30px;
+     border-bottom:solid white ;
+     display: inline-block;
+     
+}
+/*customize scrollbar   */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(149, 175, 200);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:crimson ;
+  }
+  /* footer */
+  footer{
+    text-align: center;
+    background-color:rgb(149, 175, 200);
+    padding: 30px;
+  }
+
+  /* UP */
+  .up{
+    position: fixed;
+   bottom:20px ;
+  right:20px  ;
+  padding:20px ;
+  background-color:rgb(149, 175, 200) ;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .up:hover{
+    background-color: crimson;
+  }
+  /* map */
+  .map{
+    display: flex;
+    justify-content: center;
+    border:1px solid white ;
+    margin:40px 60px ;
+    box-shadow:0 10px 35px 0px lightblue ;
+  }
+  .map iframe{
+    width:100% ;
+    padding:10px ;
+    
+    
+  }
+  /*  contact */
+  .contact{
+    padding:70px ;
+    background: rgb(238,174,202);
+    text-align: center;
+
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  }
+  .input-form{
+   margin-bottom:10px ;
+   margin-left: 30px;
+   width:100% ;
+   position: relative;
+  }
+  .input-form input{
+    border:none ;
+    border-bottom:solid ;
+    outline: none;
+    padding:0px 5px ;
+    width:100% ;
+    height: 60px;
+    transform: translateY(-20%);
+  }
+  .input-form input:hover~label,
+  .input-form input:valid~label
+  {
+    top:-5%;
+    transform: translateY(-50%);
+    transition: all 1s;
+  }
+  .input-form label{
+    font-size:14px ;
+    position: absolute;
+    left: 10px;
+    /* pointer-event:none ==>لو وقفت على اي حتة في الصفحة حيطلع الكلام لفوق */
+    pointer-events: none;
+    /* transform: translateY(-50%); فحال ماكانت اليبل بمنتصف الانبت وبدي اخليها بالمنتصف من الراس*/
+  }
+  .contact h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    border-bottom:1px solid ;
+    display:inline-block ;
+  }
+  .contatc-dis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .contact button{
+    width: 100px;
+    border-radius: 20px;
+    border:1px solid white ;
+    background-color:rgb(149, 175, 200);
+    transition: all 1s;
+  }
+  .contact button:hover{
+    width:110px ;
+    font-size: large;
+    transform: scale(1.1);
+    
+  }
